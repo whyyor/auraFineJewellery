@@ -1,0 +1,28 @@
+@keyframes moveFromBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opaqTransition {
+    3% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    28% {
+        transform: translateX(-700px);
+    }
+
+    100% {
+        transform: translateX(-700px);
+    }
+}

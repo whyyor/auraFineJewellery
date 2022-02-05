@@ -1,0 +1,109 @@
+/* sizes
+0-300 : small phone
+300-600 : phone
+600-900: tablet portrait
+900-1200: tablet landscape
+1200-1800: [where normal sizes apply
+1800px+: Big pc
+*/
+@mixin gradient-1-to-5(){
+    background-image: linear-gradient(to bottom right, $color-primary-1 30%, $color-primary-5);
+    background-clip: text;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255, 0);
+    -moz-text-fill-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+}
+
+@mixin gradient-5-to-1() {
+    background-image: linear-gradient(to bottom right, $color-primary-5 30%, $color-primary-1);
+    background-clip: text;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -moz-text-fill-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    }
+
+@mixin gradient-2-to-1{
+    background-image: linear-gradient(to bottom right, $color-primary-2 30%, $color-primary-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -moz-text-fill-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+}
+
+@mixin gradient-3-to-1 {
+    background-image: linear-gradient(to right, $color-primary-3 3%, $color-primary-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -moz-text-fill-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==breakpoint-2 {
+        @media only screen and (max-width: 20em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-3 {
+        @media only screen and (max-width: 21.25em) {
+            @content
+        }
+    }
+
+    @if $breakpoint==breakpoint-4 {
+        @media only screen and (max-width: 25em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-5 {
+        @media only screen and (max-width: 31.25em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-6 {
+        @media only screen and (max-width: 40.625em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-9 {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-1k {
+        @media only screen and (max-width: 62.5em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-12k {
+        @media only screen and (max-width: 75em) {
+            @content
+        }
+    }
+    @if $breakpoint==breakpoint-15k {
+        @media only screen and (max-width: 93.75em) {
+            @content
+        }
+    }
+
+    @if $breakpoint==breakpoint-15k-above {
+        @media only screen and (min-width: 93.75em) {
+            @content
+        }
+    }
+}

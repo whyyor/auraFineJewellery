@@ -1,0 +1,119 @@
+.aboutus{
+    width: 100%;
+    height: 70vh;
+    background-image: url(../../img/medium.webp);
+    background-size: cover;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    overflow: hidden;
+
+    @include respond(breakpoint-1k){
+        height: 65vh;
+    }
+
+    @include respond(breakpoint-9){
+        height: 75vh;
+    }
+
+    @include respond(breakpoint-6){
+        height: 80vh;
+    }
+
+    @include respond(breakpoint-4){
+        height: 105vh;
+        background-image: url(../../img/small.webp);
+    }
+
+    @include respond (breakpoint-2){
+        height: 130vh;
+    }
+    &__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: $default-font-family;
+        font-size: $default-font-size;
+        color: $color-primary-2;
+        height: 100%;
+        padding: 0 4rem;
+        margin-top: 2rem;
+        
+        @include respond(breakpoint-9){
+            flex-direction: column;
+        }
+
+        @include respond(breakpoint-4){
+            padding: 0 2rem;
+        }
+
+
+        &--main{
+            width: 60%;
+            padding-right: 4rem;
+            &-heading{
+                font-size: $big-font-size;
+                background-image: linear-gradient(to bottom right, $color-primary-1 1%, $color-primary-5);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            &-text{
+                color: $color-primary-3;
+                filter: brightness(97%);
+            }
+
+            @include respond(breakpoint-9) {
+                width: 100%;
+                padding-right: 0;
+                padding-bottom: 2rem;
+            }
+
+        }
+        &--secondary{
+            width: 50%;
+
+            @include respond(breakpoint-9) {
+                width: 100%;
+            }
+
+            &-mission{
+                &-heading{
+                    font-size: $big-font-size;
+                    display: inline;
+                    background-image: linear-gradient(to bottom right, $color-primary-1 1%, $color-primary-5);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+
+                @include respond(breakpoint-9) {
+                    padding-bottom: 2rem;
+                }
+
+                &-text{
+                    background-image: linear-gradient(to bottom right, $color-primary-3 1%, $color-primary-5);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+            &-vision{
+                &-heading{
+                    font-size: $big-font-size;
+                    background-image: linear-gradient(to bottom right, $color-primary-1 1%, $color-primary-5);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+                &-text{
+                    display: inline;
+                    background-image: linear-gradient(to bottom right, $color-primary-3 1%, $color-primary-5);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
+    }
+}

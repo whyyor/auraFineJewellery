@@ -1,0 +1,184 @@
+.navbar-section {
+    box-shadow: 0 .5rem 1rem rgba($color-primary-1, .5);
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem 10%;
+    background-image: url(/img/navbar.webp);
+    height: 2rem;
+    position: relative;
+
+    @include respond(breakpoint-6) {
+        height: 7rem;
+        background-image: url(/img/navbar.png);
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    margin-top: -190px;
+    margin-left: -90px;
+    transform: scale(.1);
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    margin-right: -15rem;
+    color: $color-primary-1;
+
+    @include respond(breakpoint-15k-above) {
+        margin-right: -15rem;
+    }
+
+    @include respond(breakpoint-15k) {
+        margin-right: -13rem;
+    }
+
+    @include respond(breakpoint-12k) {
+        margin-right: -11rem;
+    }
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-family: $default-font-family;
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: $color-primary-2;
+}
+
+.nav__links li {
+    padding: 0px 1.5rem;
+
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: $color-primary-5;
+}
+
+.overlay__link{
+    @include gradient-5-to-1;
+}
+
+.cta {
+    margin-left: 2rem;
+    padding: 0 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    color: $color-primary-3;
+}
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+    margin-right: -12.5%;
+    font-size: $big-font-size;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-image: url(/img/small.webp);
+    background-size: cover;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay__item {
+    font-size: $big-font-size;
+    color: $color-primary-1;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 3rem;
+    font-size: $big-font-size;
+    display: block;
+    transition: all 0.3s ease 0s;
+    color: $color-primary-1;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: $color-primary-3;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 2rem;
+    right: 4.5rem;
+    font-size: 6rem;
+    @include gradient-5-to-1;
+    // color: $color-primary-1;
+    cursor: pointer;
+}
+
+
+@include respond(breakpoint-4) {
+    .overlay a {
+        font-size: $big-font-size;
+    }
+
+    .overlay .close {
+        font-size: $big-font-size;
+        transform: scale(2);
+        top: 1.5rem;
+        right: 3.5rem;
+    }
+}
+
+;
+
+
+@include respond(breakpoint-9) {
+
+    .nav__links,
+    .cta {
+        display: none;
+    }
+
+    .menu {
+        display: initial;
+    }
+}
+
+// @media only screen and (max-width: 800px) {
+
+
+// }

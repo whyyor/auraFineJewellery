@@ -1,0 +1,166 @@
+.reviews {
+    display: flex;
+    height: 95vh;
+    max-width: 100%;
+    background-image: url(../../img/medium.webp);
+    font-family: $default-font-family;
+    background-size: cover;
+    justify-content: center;
+    overflow: hidden;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+    @include respond(breakpoint-15k-above){
+        background-image: url(../../img/large.webp);
+    }
+
+    @include respond(breakpoint-1k){
+        height: 100vh;
+    }
+
+
+    @include respond(breakpoint-9) {
+        height: 105vh;
+    }
+
+    @include respond(breakpoint-6) {
+        height: 100vh;
+    }
+
+    @include respond(breakpoint-4) {
+        height: 120vh;
+        background-image: url(../../img/small.webp);
+    }
+
+    &__box {
+        max-width: 90%;
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(breakpoint-9){
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 100%;
+            margin-bottom: -7rem;
+        }
+
+    }
+
+    &__why-us {
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include gradient-2-to-1;
+        padding: 1rem 2rem;
+        //Add margin bottom -15rem here in media query...
+
+        @include respond(breakpoint-9) {
+            max-width: 100%;
+            padding: 0 2rem;
+        }
+
+        &--heading {
+            font-size: $big-font-size;
+            @include gradient-3-to-1;
+        }
+
+        &--text {
+            font-size: $default-font-size;
+            @include gradient-5-to-1;
+            @include respond(breakpoint-9){
+                margin-bottom: 4.25rem;
+            }
+
+        }
+    }
+
+    &__side {
+        display: flex;
+        max-width: 40%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        color: $color-primary-3;
+        filter: brightness(95%);
+        font-size: $default-font-size;
+
+        @include respond(breakpoint-9){
+            max-width: 100%;
+        }
+
+        &-review--person {
+            display: flex;
+            margin-top: 1.5rem;
+
+            &-1 {
+                margin-bottom: 4.5%;
+                transition: all .5s;
+                border-radius: .5rem;
+                padding: 1rem 2rem;
+
+                @include respond(breakpoint-9){
+                    margin-bottom: 2rem;
+                }
+            }
+
+            &-2 {
+                transition: all .5s;
+                border-radius: .5rem;
+                padding: 1rem 2rem;
+            }
+
+            &-credentials {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: flex-start;
+                padding-left: 5%;
+                align-items: center;
+                font-size: $medium-font-size;
+                flex-direction: column;
+            }
+
+            &-name {
+                font-size: $default-font-size;
+                align-self: flex-start;
+                justify-self: center;
+                color: $color-primary-3;
+            }
+
+            &-designation {
+                font-size: $small-font-size;
+                align-self: flex-start;
+                justify-self: center;
+            }
+
+            &-img {
+                width: 8.5%;
+                height: 8.5%;
+
+                @include respond(breakpoint-9){
+                    width: 5.5%;
+                    height: 5.5%;
+
+                }
+
+                @include respond(breakpoint-5){
+                height: 7.5%;
+                width: 7.5%;
+                }
+
+                @include respond(breakpoint-4){
+                    width: 8.5%;
+                    height: 8.5%;
+                }
+
+                @include respond(breakpoint-3){
+                    height: 12.25%;
+                    width: 12.25%;
+                }
+            }
+        }
+    }
+}

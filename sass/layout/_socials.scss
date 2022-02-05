@@ -1,0 +1,68 @@
+.social {
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 0 auto;
+    overflow: hidden;
+    @include respond(breakpoint-1k){
+        height: 50vh;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: $big-font-size;
+        font-weight: 100;
+
+
+        &--text {
+            display: inline;
+            align-self: center;
+            justify-content: space-evenly;
+            @include gradient-1-to-5;
+            font-family: $default-font-family;
+            font-weight: 400;
+            padding: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        &--elements {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(2.5rem);
+            text-decoration: none;
+            transition: ease .3s;
+        }
+
+        &--element {
+
+            list-style-type: none;
+            cursor: pointer;
+            margin-right: 7.5rem;
+            transition: ease .3s;
+            padding-right: -2rem;
+
+            &-item,
+            &-item:link,
+            &-item:focus,
+            &-item:visited {
+                text-decoration: none;
+                @include gradient-1-to-5;
+                &:hover {
+                    @include gradient-5-to-1;
+                    text-decoration: none;
+                }
+            }
+            &:hover{
+                transform: translateY(-.5rem);
+            }
+        }
+    }
+}

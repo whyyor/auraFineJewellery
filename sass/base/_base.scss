@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    @include respond(breakpoint-1k){
+        font-size: 56.25%;
+    }
+
+    @include respond(breakpoint-6){
+        font-size: 50%;
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}

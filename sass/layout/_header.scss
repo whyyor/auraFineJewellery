@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    background-image: url(../../img/medium.webp);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    @include respond(breakpoint-1k){
+        height: 70vh;
+    }
+
+    @include respond(breakpoint-4){
+        background-image: url(../../img/small.webp);
+    }
+
+    &__container {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        animation: moveFromBottom .5s ease-in;
+
+
+        &-img {
+            display: flex;
+            align-self: center;
+            width: 37.5%;
+            margin-bottom: 2rem;
+        }
+
+        &--txt {
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: $color-primary-5;
+
+            &-main {
+                font-family: $default-font-family;
+            }
+
+            &-sec {
+                font-size: 3rem;
+                font-family: $cursive-font-family;
+            }
+        }
+    }
+}

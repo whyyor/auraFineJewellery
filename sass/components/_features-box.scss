@@ -1,0 +1,44 @@
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 7rem 0 3rem 0;
+    font-family: $default-font-family;
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        width: 40vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        border-radius: .5rem;
+        margin-bottom: 3rem;
+        transition: all .2s;
+        &:hover{
+            box-shadow: 0 .5rem 1rem rgba($color-primary-1,.5);
+            transform: translateY(-2rem);
+        }
+
+        &--icon {
+            display: flex;
+            color: $color-primary-1;
+            filter: brightness(93%);
+            font-size: 1rem;
+            transform: scale(3) translateY(-3px);
+            padding: 2rem;
+            justify-content: center;
+            font-weight:lighter;
+        }
+
+        &--text {
+            font-size: $medium-font-size;
+            text-align: center;
+            @include gradient-5-to-1;
+            &-small{
+                font-size: $default-font-size;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.credit{
+    height: 4vh;
+    display: inline;
+    text-align: center;
+    padding-top: 1vh;
+    font-size: $default-font-size;
+    @include gradient-5-to-1;
+    overflow: hidden;
+}
